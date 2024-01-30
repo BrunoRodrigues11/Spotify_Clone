@@ -33,3 +33,14 @@ searchInput.addEventListener("input", function () {
   }
   requestApi(searchTerm);
 });
+
+// Colocar borda na div quando o input estiver focused
+const searchContainer = document.getElementById("searchContainer");
+
+searchInput.addEventListener("focus", function () {
+  searchContainer.classList.add("input-focused");
+});
+
+searchInput.addEventListener("blur", function () {
+  searchContainer.classList.remove("input-focused");
+});

@@ -4,7 +4,7 @@ body {
 }
 /* HEADER */
 .main-container {
-  max-width: 80vw;
+  max-width: 80%;
   height: 100vh;
   margin-left: 305px;
 }
@@ -38,7 +38,7 @@ body {
   background-color: var(--bg-arrow-color);
   border-radius: 50%;
   border: none;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .header__login {
@@ -54,7 +54,13 @@ body {
   margin-left: 8px;
   background-color: #242424;
   border-radius: 500px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
+  transition: all ease 0.4s;
+}
+
+.header__search:hover {
+  background-color: #2f2f2f;
+  transition: all ease 0.4s;
 }
 
 .header__search img {
@@ -72,6 +78,10 @@ body {
   overflow: hidden;
   white-space: nowrap;
   outline: none;
+}
+
+.header__search.input-focused {
+  border: 2px solid #fff;
 }
 
 .header__login .subscribe {
@@ -94,6 +104,7 @@ body {
 /* PLAYLIST */
 .playlist-container {
   padding: 16px 24px 0 24px;
+  margin-bottom: 8px;
   height: 68vh;
   background-color: #121212;
 }
@@ -129,8 +140,8 @@ body {
 
 .offer__list-item {
   display: grid;
-  justify-items: ce;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 7px;
   gap: 7px;
   margin-bottom: 16px;
